@@ -10,22 +10,28 @@
     </div>
 
     <div class="bg-soft rounded-3xl p-8 md:p-12 grid md:grid-cols-2 gap-8">
-      <form @submit.prevent="submit" class="space-y-4">
+      <form
+        action="https://formspree.io/f/mbdbqakl"
+        method="POST"
+        class="space-y-4"
+      >
         <div class="flex gap-6 mb-4">
           <label class="flex items-center gap-2 cursor-pointer">
             <input
               type="radio"
+              name="type"
               value="hi"
-              v-model="form.type"
               class="accent-lime"
+              checked
             />
             <span class="text-sm">Say Hi</span>
           </label>
+
           <label class="flex items-center gap-2 cursor-pointer">
             <input
               type="radio"
+              name="type"
               value="demo"
-              v-model="form.type"
               class="accent-lime"
             />
             <span class="text-sm">Request a Demo</span>
@@ -35,7 +41,7 @@
         <div>
           <label class="text-sm font-medium block mb-1">Name</label>
           <input
-            v-model="form.name"
+            name="name"
             type="text"
             placeholder="Name"
             class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white focus:outline-none focus:border-dark text-sm"
@@ -45,7 +51,7 @@
         <div>
           <label class="text-sm font-medium block mb-1">Email*</label>
           <input
-            v-model="form.email"
+            name="email"
             type="email"
             required
             placeholder="Email"
@@ -56,7 +62,7 @@
         <div>
           <label class="text-sm font-medium block mb-1">Message*</label>
           <textarea
-            v-model="form.message"
+            name="message"
             required
             rows="5"
             placeholder="Tell us about your use case, stack, or AI workflow"
@@ -64,11 +70,17 @@
           ></textarea>
         </div>
 
+        <input
+          type="hidden"
+          name="_subject"
+          value="New GreenLLM contact form submission"
+        />
+
         <button
           type="submit"
           class="w-full bg-dark text-white py-3 rounded-lg text-sm hover:opacity-90"
         >
-          {{ sent ? "Message Sent ✓" : "Send Message" }}
+          Send Message
         </button>
       </form>
 
@@ -88,32 +100,12 @@
             points="150,80 175,150 150,220 125,150"
             fill="#0E0E0E"
           />
-          <polygon points="130,170 140,200 110,200 90,210 110,220 90,240 130,225 140,255 150,225 170,235 160,215 180,210 160,200" fill="#C6F84E" />
+          <polygon
+            points="130,170 140,200 110,200 90,210 110,220 90,240 130,225 140,255 150,225 170,235 160,215 180,210 160,200"
+            fill="#C6F84E"
+          />
         </svg>
       </div>
     </div>
   </section>
 </template>
-
-<script setup>
-import { ref, reactive } from "vue";
-
-const sent = ref(false);
-const form = reactive({
-  type: "hi",
-  name: "",
-  email: "",
-  message: "",
-});
-
-function submit() {
-  console.log("Form submitted:", form);
-  sent.value = true;
-  setTimeout(() => {
-    sent.value = false;
-    form.name = "";
-    form.email = "";
-    form.message = "";
-  }, 3000);
-}
-</script>

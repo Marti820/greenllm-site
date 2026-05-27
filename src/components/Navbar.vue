@@ -3,23 +3,17 @@
     <nav
       class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
     >
-      <a href="#" class="flex items-center gap-2">
-        <div
-          class="w-8 h-8 rounded-md bg-lime flex items-center justify-center"
-        >
-          <span class="text-dark font-bold text-sm">G</span>
-        </div>
-        <span class="font-display font-bold text-dark text-lg"
-          >GreenLLM</span
-        >
+      <a href="#" class="flex items-center gap-3">
+        <img src="/favicon.svg" alt="Logo" class="w-12 h-12 object-contain" />
+        <span class="font-display font-bold text-dark text-3xl">
+          GreenLLM
+        </span>
       </a>
 
       <ul class="hidden md:flex items-center gap-8 text-sm text-dark">
         <li><a href="#product" class="hover:opacity-70">Product</a></li>
         <li><a href="#use-cases" class="hover:opacity-70">Use Cases</a></li>
-        <li>
-          <a href="#integrations" class="hover:opacity-70">Integrations</a>
-        </li>
+        <li><a href="#how-it-works" class="hover:opacity-70">How It Works</a></li>
         <li><a href="#contact" class="hover:opacity-70">Contact</a></li>
       </ul>
 

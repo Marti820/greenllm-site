@@ -16,27 +16,10 @@
         <ul class="flex flex-wrap gap-6 text-sm">
           <li><a href="#product" class="hover:text-lime">Product</a></li>
           <li><a href="#use-cases" class="hover:text-lime">Use Cases</a></li>
-          <li>
-            <a href="#integrations" class="hover:text-lime">Integrations</a>
-          </li>
+          <li><a href="#how-it-works" class="hover:text-lime">How It Works</a></li>
           <li><a href="#contact" class="hover:text-lime">Contact</a></li>
         </ul>
         <div class="flex gap-3">
-          <a
-            href="#"
-            class="w-8 h-8 rounded-full bg-white text-dark flex items-center justify-center text-xs"
-            >in</a
-          >
-          <a
-            href="#"
-            class="w-8 h-8 rounded-full bg-white text-dark flex items-center justify-center text-xs"
-            >f</a
-          >
-          <a
-            href="#"
-            class="w-8 h-8 rounded-full bg-white text-dark flex items-center justify-center text-xs"
-            >x</a
-          >
         </div>
       </div>
 
@@ -46,25 +29,36 @@
             >Contact us:</span
           >
           <div class="text-sm space-y-2 mt-4 text-gray-300">
-            <p>Email: info@greenllm.eu</p>
-            <p>Phone: +33 1 23 45 67 89</p>
-            <p>Address:<br />20 Avenue Albert Einstein, Paris</p>
+            <p>Email: jjosediazzzz@gmail.com</p>
+            <p>Location: Lyon - France</p>
           </div>
         </div>
 
         <div class="bg-[#1a1a1a] rounded-2xl p-6 flex items-center">
-          <div class="flex gap-2 w-full">
+          <form
+            action="https://formspree.io/f/mbdbqakl"
+            method="POST"
+            class="flex gap-2 w-full"
+          >
             <input
               type="email"
+              name="email"
               placeholder="Email"
+              required
               class="flex-1 bg-transparent border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-lime"
             />
+            <input
+              type="hidden"
+              name="_subject"
+              value="New GreenLLM newsletter signup"
+            />
             <button
+              type="submit"
               class="bg-lime text-dark px-5 py-2 rounded-lg text-sm font-medium hover:opacity-90"
             >
-              Subscribe for updates
+              Subscribe
             </button>
-          </div>
+          </form>
         </div>
       </div>
 
@@ -72,7 +66,6 @@
         class="mt-10 pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between gap-4 text-xs text-gray-400"
       >
         <p>© 2026 GreenLLM. All Rights Reserved.</p>
-        <a href="#" class="hover:text-lime underline">Privacy Policy</a>
       </div>
     </div>
   </footer>
