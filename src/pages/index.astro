@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.vue";
+import Hero from "../components/Hero.vue";
+import CoreCapabilities from "../components/CoreCapabilities.vue";
+import UseCases from "../components/UseCases.vue";
+import Integrations from "../components/Integrations.vue";
+import CTA from "../components/CTA.vue";
+import ContactForm from "../components/ContactForm.vue";
+import Footer from "../components/Footer.vue";
+---
+
+<Layout title="GreenLLM - EU AI Act Compliance & Governance">
+  <Navbar client:load />
+  <main>
+    <Hero />
+    <CoreCapabilities />
+    <UseCases />
+    <Integrations />
+    <CTA />
+    <ContactForm client:visible />
+  </main>
+  <Footer />
+</Layout>
